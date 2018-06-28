@@ -1,0 +1,22 @@
+
+{
+	"manifest_version": 2,
+	"name": "Classicify",
+	"version": "0.1",
+	
+	"description": "Make links to reddit in a classic reddit tab redirect to the classic site.",
+	"homepage_url": "https://github.com/dburggie/classicify",
+	"icons": {
+		"32": "icons/classicify-32.png",
+		"48": "icons/classicify-48.png",
+		"64": "icons/classicify-64.png",
+		"96": "icons/classicify-96.png"
+	},
+	
+	"content_scripts": [
+		{
+			"matches": ["https://old.reddit.com/*"],
+			"js": ["classicify.js"]
+		}
+	]
+}
