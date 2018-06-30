@@ -2,7 +2,7 @@
 {
 	"manifest_version": 2,
 	"name": "Classicify",
-	"version": "1.1.1",
+	"version": "1.2",
 	
 	"description": "Make links to reddit in a classic reddit tab redirect to the classic site.",
 	"homepage_url": "https://github.com/dburggie/classicify",
