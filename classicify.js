@@ -1,7 +1,8 @@
 
+
 function isTargetURL(url)
 {
-	var value = !url.includes("old.reddit.com") && url.includes("reddit.com");
+	var value = url.includes("www.reddit.com");
 	console.log("classicify.isTargetURL(): " + value);
 	return value;
 }
@@ -33,12 +34,11 @@ function eventHandler(e)
 //change a www.reddit.com url to a old.reddit.com url
 function makeClassic(url)
 {
-	var target = "reddit.com";
-	var classicURL = "https://old.reddit.com";
-
-	//split at our target string, skip the prefix and join the remaining
-	//chunks (if there are any)
-	return classicURL.concat(url.split(target).slice(1).join(target));
+	var targetURL = "www.reddit.com";
+	var classicURL = "old.reddit.com";
+	var split = url.split(targetURL);
+	
+	return split[0] + classicURL + split.slice(1).join(targetURL);
 }
 
 //link the above methods to our page via mouse events
